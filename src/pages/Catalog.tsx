@@ -136,18 +136,15 @@ export default function Catalog() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.45, ease: 'easeOut' }}
-              className="mb-10 overflow-hidden rounded-[20px] border border-white/10 shadow-2xl relative"
+              className="mb-10 overflow-hidden rounded-[20px] border border-white/10 shadow-2xl"
               style={{ height: 'clamp(200px, 30vw, 320px)' }}
             >
               <img
-                src="/images/catalog/ChatGPT_Image_18_jul_2026,_13_03_42.png"
+                src="/images/catalog/WhatsApp_Image_2026-07-14_at_3.11.29_PM.jpeg"
                 alt="Perros MOXX"
                 className="w-full h-full object-cover"
-                style={{ objectPosition: 'center 30%' }}
                 draggable={false}
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-black/50" />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/50" />
             </motion.div>
           )}
           {activeCategory === 'cat' && (
@@ -157,18 +154,15 @@ export default function Catalog() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.45, ease: 'easeOut' }}
-              className="mb-10 overflow-hidden rounded-[20px] border border-white/10 shadow-2xl relative"
+              className="mb-10 overflow-hidden rounded-[20px] border border-white/10 shadow-2xl"
               style={{ height: 'clamp(200px, 30vw, 320px)' }}
             >
               <img
-                src="/images/catalog/ChatGPT_Image_18_jul_2026,_13_03_42.png"
+                src="/images/catalog/gatrosss.jpeg"
                 alt="Gatos MOXX"
                 className="w-full h-full object-cover"
-                style={{ objectPosition: 'center 30%' }}
                 draggable={false}
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-black/50" />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/50" />
             </motion.div>
           )}
         </AnimatePresence>
