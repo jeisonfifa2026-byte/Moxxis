@@ -36,8 +36,20 @@ export default function SizeGuide() {
   const sizes = activeTab === 'dog' ? dogSizes : catSizes;
 
   return (
-    <div className="min-h-screen bg-dark-950 pt-24 pb-24">
-      <div className="section-padding max-w-4xl mx-auto">
+    <div className="min-h-screen bg-dark-950 pt-24 pb-24 relative">
+      {/* Background image */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <img
+          src="/images/backgrounds/ChatGPT_Image_18_jul_2026,_12_54_19.png"
+          alt=""
+          aria-hidden="true"
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-dark-950/90 via-dark-950/80 to-dark-950/92" />
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0.45) 0%, transparent 70%)' }} />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.6) 0%, transparent 30%, transparent 70%, rgba(0,0,0,0.6) 100%)' }} />
+      </div>
+      <div className="relative z-10 section-padding max-w-4xl mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
