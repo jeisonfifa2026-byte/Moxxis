@@ -72,12 +72,14 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.pexels.com/photos/4588435/pexels-photo-4588435.jpeg?auto=compress&cs=tinysrgb&w=1920"
-            alt="Perro con arnés premium"
-            className="w-full h-full object-cover"
+            src="/images/hero/ChatGPT_Image_16_jul_2026,_15_58_17.png"
+            alt="Perros con accesorios MOXX premium"
+            className="w-full h-full object-cover object-center"
+            style={{ objectPosition: 'center 20%' }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-dark-950 via-dark-950/80 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-black/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30" />
+          <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 20% 50%, rgba(0,0,0,0.4) 0%, transparent 60%)' }} />
         </div>
 
         <div className="relative section-padding max-w-7xl mx-auto w-full py-32">
