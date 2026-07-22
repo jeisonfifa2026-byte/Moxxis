@@ -3,7 +3,7 @@ import { Truck, CreditCard, ShieldCheck, Clock, MapPin, Banknote, Smartphone, Ch
 
 // 👇 IMPORTANTE: Importamos la imagen de fondo desde la carpeta src/images
 // (Ajusta los '../' según dónde esté guardado tu componente)
-import pagoBg from '../images/catalog/pago.png';
+import pagoBg from 'src/images/catalog/pago.png';
 
 const shippingMethods = [
   {
