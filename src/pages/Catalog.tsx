@@ -129,6 +129,36 @@ export default function Catalog() {
 
         {/* Category Banner */}
         <AnimatePresence mode="wait">
+
+           {/* Banner General */}
+  {activeCategory === 'all' && (
+    <motion.div
+      key="all-banner"
+      initial={{ opacity: 0, y: -12 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -8 }}
+      transition={{ duration: 0.45, ease: 'easeOut' }}
+      className="mb-10 overflow-hidden rounded-[20px] border border-white/10 shadow-2xl relative"
+      style={{ height: 'clamp(200px, 30vw, 320px)' }}
+    >
+      <img
+        src="/images/catalog/asdasd.png"
+        alt="Catálogo MOXX"
+        className="w-full h-full object-cover"
+        style={{ objectPosition: 'center 55%' }}
+        draggable={false}
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-black/55" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40" />
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            'radial-gradient(ellipse at 50% 45%, transparent 30%, rgba(0,0,0,0.25) 100%)',
+        }}
+      />
+    </motion.div>
+  )}
           {activeCategory === 'dog' && (
             <motion.div
               key="dog-banner"
