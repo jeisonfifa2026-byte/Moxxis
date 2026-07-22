@@ -76,7 +76,7 @@ export default function About() {
             </div>
             <div className="rounded-2xl overflow-hidden">
               <img
-                src="https://images.pexels.com/photos/4588437/pexels-photo-4588437.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/images/catalog/perrodog.jpeg"
                 alt="Perro feliz con collar premium"
                 className="w-full h-full object-cover"
               />
