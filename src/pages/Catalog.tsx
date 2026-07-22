@@ -121,7 +121,7 @@ export default function Catalog() {
         />
       </div>
 
-      <div className="relative section-padding max-w-7xl mx-auto w-full py-22">
+      <div className="relative section-padding max-w-7xl mx-auto w-full py-16">
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
