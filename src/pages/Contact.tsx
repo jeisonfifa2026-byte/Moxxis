@@ -111,7 +111,7 @@ export default function Contact() {
                   <Instagram className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://facebook.com"
+                  href="https://www.tiktok.com/@moxxoficial2026"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-xl bg-dark-950 border border-white/10 flex items-center justify-center text-dark-400 hover:text-gold-400 hover:border-gold-500/30 transition-all"

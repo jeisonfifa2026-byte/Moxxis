@@ -17,7 +17,7 @@ export default function Footer() {
               <a href="https://www.instagram.com/moxxoficial/" target="_blank" rel="noopener noreferrer" className="text-dark-400 hover:text-gold-400 transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-dark-400 hover:text-gold-400 transition-colors">
+              <a href="https://www.tiktok.com/@moxxoficial2026" target="_blank" rel="noopener noreferrer" className="text-dark-400 hover:text-gold-400 transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
             </div>

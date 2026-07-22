@@ -180,7 +180,7 @@ export default function Shipping() {
               >
                 {method.comingSoon && (
                   <span className="absolute top-4 right-4 px-2 py-1 rounded text-[10px] font-semibold bg-gold-500/10 text-gold-400 uppercase tracking-wider">
-                    Próximamente
+                    New
                   </span>
                 )}
                 <div className="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center mb-4">
