@@ -48,25 +48,59 @@ const paymentMethods = [
 
 export default function Shipping() {
   return (
-    <div className="min-h-screen bg-dark-950 pt-24 pb-24">
-      <div className="section-padding max-w-5xl mx-auto">
-        {/* Header */}
+  <div className="min-h-screen bg-dark-950">
+
+    {/* Hero */}
+    <section className="relative min-h-[60vh] flex items-center overflow-hidden">
+
+      {/* Imagen de fondo */}
+      <div className="absolute inset-0">
+        <img
+          src="/images/catalog/pago.png"
+          alt="Envíos y Pagos MOXX"
+          className="w-full h-full object-cover"
+          style={{ objectPosition: "center 40%" }}
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-black/35" />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse at 20% 55%, rgba(0,0,0,.35) 0%, transparent 55%)",
+          }}
+        />
+      </div>
+
+      {/* Contenido */}
+      <div className="relative section-padding max-w-5xl mx-auto w-full py-32">
+
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mb-16"
+          transition={{ duration: 0.8 }}
+          className="max-w-2xl"
         >
-          <p className="text-gold-400 text-sm font-semibold tracking-[0.2em] uppercase mb-3">
-            Información de Compra
+          <p className="text-gold-400 text-sm font-semibold tracking-[0.3em] uppercase mb-6">
+            INFORMACIÓN DE COMPRA
           </p>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Envíos y Pagos
+
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+            Envíos y <span className="gold-text-gradient">Pagos</span>
           </h1>
-          <p className="text-dark-400 max-w-xl">
-            Conoce nuestras opciones de envío a nivel nacional y los métodos de pago disponibles.
+
+          <p className="mt-6 text-lg text-dark-300 max-w-xl leading-relaxed">
+            Conoce nuestras opciones de envío a nivel nacional y los métodos de pago disponibles para realizar tus compras con total seguridad.
           </p>
+
         </motion.div>
+
+      </div>
+
+    </section>
+
+    <div className="section-padding max-w-5xl mx-auto py-20">
 
         {/* Shipping Section */}
         <motion.div
