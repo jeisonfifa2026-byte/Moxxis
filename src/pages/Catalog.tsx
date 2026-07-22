@@ -114,7 +114,7 @@ export default function Catalog() {
   style={{
     backgroundImage: `
       linear-gradient(rgba(0,0,0,.70), rgba(0,0,0,.88)),
-      url('/images/catalog/asdasd.png')
+      url('/images/catalog/banner123123.png')
     `,
   }}
 >
