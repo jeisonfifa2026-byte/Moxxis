@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useCart } from '../hooks/useCart';
-import { X, Plus, Minus, Trash2, ShoppingBag } from 'lucide-react';
+import { X, Plus, Minus, Trash2, ShoppingBag, MessageCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { getProductImage } from '../data/products';
@@ -22,6 +22,25 @@ export default function CartDrawer() {
     if (items.length === 0) return;
     setIsCartOpen(false);
     setIsCheckoutOpen(true);
+  };
+
+  const handleWhatsAppOrder = () => {
+    if (items.length === 0) return;
+    const lines = items.map(item => {
+      const lineTotal = item.unitPrice * item.quantity;
+      return `• ${item.product.name}\n   📏 Talla: ${item.size}\n   🎨 Color: ${item.color}\n   🔢 Cantidad: ${item.quantity}\n   💰 ${formatPrice(lineTotal)}`;
+    });
+    const message =
+      `🐾 ¡Hola MOXX!\n\n` +
+      `Quiero realizar el siguiente pedido:\n\n` +
+      `🛍 Productos:\n${lines.join('\n\n')}\n\n` +
+      `━━━━━━━━━━━━━━\n` +
+      `💰 Subtotal:\n${formatPrice(totalPrice)}\n` +
+      `🚚 Envío:\nSe calculará al finalizar.\n` +
+      `💵 Total:\n${formatPrice(totalPrice)}\n\n` +
+      `Gracias.`;
+    const url = `https://wa.me/573203177677?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
   };
 
   return (
@@ -154,6 +173,14 @@ export default function CartDrawer() {
                 </div>
                 <button onClick={handleCheckout} className="btn-gold w-full">
                   Finalizar Pedido
+                </button>
+                <button
+                  onClick={handleWhatsAppOrder}
+                  className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold text-white transition-all duration-300 hover:brightness-110 hover:shadow-lg active:scale-[0.98]"
+                  style={{ backgroundColor: '#25D366' }}
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  Pedir por WhatsApp
                 </button>
                 <button
                   onClick={clearCart}
