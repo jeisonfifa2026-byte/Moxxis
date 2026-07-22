@@ -140,7 +140,7 @@ export default function Catalog() {
               style={{ height: 'clamp(200px, 30vw, 320px)' }}
             >
               <img
-                src="/images/catalog/asdasd copy.png"
+                src="/images/catalog/WhatsApp_Image_2026-07-14_at_3.11.29_PM.jpeg"
                 alt="Perros MOXX"
                 className="w-full h-full object-cover"
                 style={{ objectPosition: 'center 55%' }}
@@ -162,7 +162,7 @@ export default function Catalog() {
               style={{ height: 'clamp(200px, 30vw, 320px)' }}
             >
               <img
-                src="/images/catalog/asdasd copy.png"
+                src="/images/catalog/gatrosss.jpeg"
                 alt="Gatos MOXX"
                 className="w-full h-full object-cover"
                 style={{ objectPosition: 'center 55%' }}
