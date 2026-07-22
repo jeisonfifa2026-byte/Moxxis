@@ -18,7 +18,7 @@ const catSizes = [
 
 function MeasurementCard({ icon: Icon, title, desc }: { icon: typeof Dog; title: string; desc: string }) {
   return (
-    <div className="flex items-start gap-4 p-6 rounded-xl bg-dark-900 border border-white/5">
+    <div className="flex items-start gap-4 p-6 rounded-xl bg-dark-900/80 backdrop-blur-sm border border-white/5">
       <div className="w-10 h-10 rounded-lg bg-gold-500/10 flex items-center justify-center flex-shrink-0">
         <Icon className="w-5 h-5 text-gold-400" />
       </div>
@@ -36,8 +36,19 @@ export default function SizeGuide() {
   const sizes = activeTab === 'dog' ? dogSizes : catSizes;
 
   return (
-    <div className="min-h-screen bg-dark-950 pt-24 pb-24">
-      <div className="section-padding max-w-4xl mx-auto">
+    <div className="relative min-h-screen bg-dark-950 overflow-hidden">
+      {/* 1. Imagen de Fondo */}
+      <img
+        src="/images/logo23.png"
+        alt="Fondo Guía de Tallas MOXX"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+
+      {/* 2. Capa oscura para garantizar legibilidad (Ajusta /80 si la quieres más o menos clara) */}
+      <div className="absolute inset-0 bg-dark-950/80 backdrop-blur-[2px]" />
+
+      {/* 3. Contenido Principal */}
+      <div className="relative z-10 section-padding max-w-4xl mx-auto pt-24 pb-24">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -83,7 +94,7 @@ export default function SizeGuide() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mb-12 p-6 rounded-xl bg-gold-500/5 border border-gold-500/10"
+          className="mb-12 p-6 rounded-xl bg-gold-500/10 backdrop-blur-md border border-gold-500/20"
         >
           <h3 className="text-sm font-semibold text-gold-400 uppercase tracking-wide mb-3">
             Consejos Importantes
@@ -115,7 +126,7 @@ export default function SizeGuide() {
             className={`flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300 ${
               activeTab === 'dog'
                 ? 'bg-gold-500 text-dark-950'
-                : 'bg-dark-900 text-dark-400 border border-white/10 hover:border-gold-500/30'
+                : 'bg-dark-900/80 text-dark-400 border border-white/10 hover:border-gold-500/30'
             }`}
           >
             <Dog className="w-4 h-4" /> Perros
@@ -125,7 +136,7 @@ export default function SizeGuide() {
             className={`flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300 ${
               activeTab === 'cat'
                 ? 'bg-gold-500 text-dark-950'
-                : 'bg-dark-900 text-dark-400 border border-white/10 hover:border-gold-500/30'
+                : 'bg-dark-900/80 text-dark-400 border border-white/10 hover:border-gold-500/30'
             }`}
           >
             <Cat className="w-4 h-4" /> Gatos
@@ -138,12 +149,12 @@ export default function SizeGuide() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
-          className="rounded-2xl border border-white/5 overflow-hidden"
+          className="rounded-2xl border border-white/10 overflow-hidden backdrop-blur-md"
         >
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
-                <tr className="bg-dark-900">
+                <tr className="bg-dark-900/90">
                   <th className="text-left text-xs font-semibold text-gold-400 uppercase tracking-wider px-6 py-4">
                     Talla
                   </th>
@@ -165,7 +176,7 @@ export default function SizeGuide() {
                 {sizes.map((row, i) => (
                   <tr
                     key={row.size}
-                    className={`border-t border-white/5 ${i % 2 === 0 ? 'bg-dark-950' : 'bg-dark-900/50'}`}
+                    className={`border-t border-white/5 ${i % 2 === 0 ? 'bg-dark-950/80' : 'bg-dark-900/60'}`}
                   >
                     <td className="px-6 py-4">
                       <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gold-500/10 text-gold-400 font-bold text-sm">
@@ -183,7 +194,7 @@ export default function SizeGuide() {
           </div>
         </motion.div>
 
-        <p className="text-dark-500 text-sm mt-6 text-center">
+        <p className="text-dark-400 text-sm mt-6 text-center">
           ¿Tienes dudas sobre tu talla?{' '}
           <a href="/contacto" className="text-gold-400 hover:text-gold-300 transition-colors">
             Contáctanos
