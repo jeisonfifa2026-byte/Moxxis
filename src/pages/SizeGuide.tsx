@@ -39,7 +39,7 @@ export default function SizeGuide() {
     <div className="relative min-h-screen bg-dark-950 overflow-hidden">
       {/* 1. Imagen de Fondo */}
       <img
-        src="/images/logo23.png"
+        src="/images/catalog/logo23.png"
         alt="Fondo Guía de Tallas MOXX"
         className="absolute inset-0 w-full h-full object-cover"
       />
