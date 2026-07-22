@@ -140,7 +140,7 @@ export default function Catalog() {
               style={{ height: 'clamp(200px, 30vw, 320px)' }}
             >
               <img
-                src="/images/catalog/asdasd copy.png"
+                src="/images/catalog/asdasd.png"
                 alt="Perros MOXX"
                 className="w-full h-full object-cover"
                 style={{ objectPosition: 'center 55%' }}
