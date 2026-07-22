@@ -140,14 +140,15 @@ export default function Catalog() {
               style={{ height: 'clamp(200px, 30vw, 320px)' }}
             >
               <img
-                src="/images/catalog/asdasd.png"
+                src="/images/catalog/asdasd copy.png"
                 alt="Perros MOXX"
                 className="w-full h-full object-cover"
-                style={{ objectPosition: 'center 40%' }}
+                style={{ objectPosition: 'center 55%' }}
                 draggable={false}
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/15 to-black/45" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/30" />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-black/55" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40" />
+              <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 45%, transparent 30%, rgba(0,0,0,0.25) 100%)' }} />
             </motion.div>
           )}
           {activeCategory === 'cat' && (
@@ -161,14 +162,15 @@ export default function Catalog() {
               style={{ height: 'clamp(200px, 30vw, 320px)' }}
             >
               <img
-                src="/images/catalog/asdasd.png"
+                src="/images/catalog/asdasd copy.png"
                 alt="Gatos MOXX"
                 className="w-full h-full object-cover"
-                style={{ objectPosition: 'center 40%' }}
+                style={{ objectPosition: 'center 55%' }}
                 draggable={false}
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/15 to-black/45" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/30" />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-black/55" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40" />
+              <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 45%, transparent 30%, rgba(0,0,0,0.25) 100%)' }} />
             </motion.div>
           )}
         </AnimatePresence>
