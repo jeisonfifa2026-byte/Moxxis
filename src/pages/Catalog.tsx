@@ -107,25 +107,38 @@ export default function Catalog() {
   };
 
   return (
-    <div className="min-h-screen bg-dark-950 pt-24 pb-24">
+    <div className="min-h-screen bg-dark-950">
       <div className="section-padding max-w-7xl mx-auto">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mb-12"
-        >
-          <p className="text-gold-400 text-sm font-semibold tracking-[0.2em] uppercase mb-3">
-            Colección Completa
-          </p>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Catálogo MOXX
-          </h1>
-          <p className="text-dark-400 max-w-xl">
-            Explora nuestra colección de arneses, correas y collares premium diseñados para perros y gatos.
-          </p>
-        </motion.div>
+        <div
+  className="relative -mx-6 sm:-mx-8 lg:-mx-12 mb-12 pt-28 pb-28 bg-cover bg-center bg-no-repeat overflow-hidden rounded-b-3xl"
+  style={{
+    backgroundImage: `
+      linear-gradient(rgba(0,0,0,.70), rgba(0,0,0,.88)),
+      url('/images/catalog/asdasd.png')
+    `,
+  }}
+>
+  <div className="max-w-7xl mx-auto section-padding relative z-10">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="max-w-xl"
+    >
+      <p className="text-gold-400 text-sm font-semibold tracking-[0.2em] uppercase mb-3">
+        Colección Completa
+      </p>
+
+      <h1 className="text-4xl lg:text-6xl font-bold text-white mb-4">
+        Catálogo MOXX
+      </h1>
+
+      <p className="text-gray-300">
+        Explora nuestra colección de arneses, correas y collares premium diseñados para perros y gatos.
+      </p>
+    </motion.div>
+  </div>
+</div>
 
         {/* Category Banner */}
         <AnimatePresence mode="wait">
