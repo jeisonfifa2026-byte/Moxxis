@@ -1,4 +1,4 @@
-git statusimport { Product, SizeOption } from '../types';
+import { Product, SizeOption } from '../types';
 
 export const products: Product[] = [
   // ===================== PERROS — ARNÉS / PECHERA =====================
