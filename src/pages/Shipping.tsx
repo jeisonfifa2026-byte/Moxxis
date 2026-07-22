@@ -1,9 +1,6 @@
 import { motion } from 'framer-motion';
 import { Truck, CreditCard, ShieldCheck, Clock, MapPin, Banknote, Smartphone, Check } from 'lucide-react';
 
-// Ruta exacta para importar la imagen desde src/pages/ hacia src/images/catalog/pago.png
-import pagoBg from '../images/catalog/pago.png';
-
 const shippingMethods = [
   {
     icon: Truck,
@@ -51,19 +48,8 @@ const paymentMethods = [
 
 export default function Shipping() {
   return (
-    <div className="relative min-h-screen bg-dark-950 overflow-hidden">
-      {/* Imagen de Fondo */}
-      <img
-        src={pagoBg}
-        alt="Fondo Envíos y Pagos MOXX"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-
-      {/* Capa oscura de sobreposición */}
-      <div className="absolute inset-0 bg-dark-950/80 backdrop-blur-[2px]" />
-
-      {/* Contenido Principal */}
-      <div className="relative z-10 section-padding max-w-5xl mx-auto pt-24 pb-24">
+    <div className="min-h-screen bg-dark-950 pt-24 pb-24">
+      <div className="section-padding max-w-5xl mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -101,7 +87,7 @@ export default function Shipping() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="p-6 rounded-2xl bg-dark-900/80 backdrop-blur-md border border-white/10 hover:border-gold-500/30 transition-all duration-500"
+                className="p-6 rounded-2xl bg-dark-900 border border-white/5 hover:border-gold-500/20 transition-all duration-500"
               >
                 <div className="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center mb-4">
                   <method.icon className="w-6 h-6 text-gold-400" />
@@ -113,7 +99,7 @@ export default function Shipping() {
             ))}
           </div>
 
-          <div className="p-6 rounded-xl bg-gold-500/10 backdrop-blur-md border border-gold-500/20">
+          <div className="p-6 rounded-xl bg-gold-500/5 border border-gold-500/10">
             <h3 className="text-sm font-semibold text-gold-400 uppercase tracking-wide mb-3">
               Políticas de Envío
             </h3>
@@ -160,10 +146,10 @@ export default function Shipping() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="relative p-6 rounded-2xl bg-dark-900/80 backdrop-blur-md border border-white/10 hover:border-gold-500/30 transition-all duration-500"
+                className="relative p-6 rounded-2xl bg-dark-900 border border-white/5 hover:border-gold-500/20 transition-all duration-500"
               >
                 {method.comingSoon && (
-                  <span className="absolute top-4 right-4 px-2 py-1 rounded text-[10px] font-semibold bg-gold-500/20 text-gold-400 uppercase tracking-wider">
+                  <span className="absolute top-4 right-4 px-2 py-1 rounded text-[10px] font-semibold bg-gold-500/10 text-gold-400 uppercase tracking-wider">
                     Próximamente
                   </span>
                 )}
