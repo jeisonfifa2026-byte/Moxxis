@@ -34,11 +34,7 @@ const paymentMethods = [
     desc: 'Pago en línea directo desde tu cuenta bancaria. En proceso de integración.',
     comingSoon: true,
   },
-  {
-    icon: CreditCard,
-    title: 'Efectivo / Contraentrega',
-    desc: 'Disponible en Bogotá y ciudades principales. Tarifa adicional del 5%.',
-  },
+  
   {
     icon: ShieldCheck,
     title: 'Garantía de Entrega',
