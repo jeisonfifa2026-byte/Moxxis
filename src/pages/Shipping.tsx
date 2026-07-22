@@ -1,9 +1,8 @@
 import { motion } from 'framer-motion';
 import { Truck, CreditCard, ShieldCheck, Clock, MapPin, Banknote, Smartphone, Check } from 'lucide-react';
 
-// 👇 IMPORTANTE: Importamos la imagen de fondo desde la carpeta src/images
-// (Ajusta los '../' según dónde esté guardado tu componente)
-import pagoBg from 'src/images/catalog/pago.png';
+// Ruta exacta para importar la imagen desde src/pages/ hacia src/images/catalog/pago.png
+import pagoBg from '../images/catalog/pago.png';
 
 const shippingMethods = [
   {
@@ -53,17 +52,17 @@ const paymentMethods = [
 export default function Shipping() {
   return (
     <div className="relative min-h-screen bg-dark-950 overflow-hidden">
-      {/* 1. Imagen de Fondo */}
+      {/* Imagen de Fondo */}
       <img
         src={pagoBg}
         alt="Fondo Envíos y Pagos MOXX"
         className="absolute inset-0 w-full h-full object-cover"
       />
 
-      {/* 2. Capa oscura con leve desenfoque para legibilidad */}
+      {/* Capa oscura de sobreposición */}
       <div className="absolute inset-0 bg-dark-950/80 backdrop-blur-[2px]" />
 
-      {/* 3. Contenido Principal */}
+      {/* Contenido Principal */}
       <div className="relative z-10 section-padding max-w-5xl mx-auto pt-24 pb-24">
         {/* Header */}
         <motion.div
