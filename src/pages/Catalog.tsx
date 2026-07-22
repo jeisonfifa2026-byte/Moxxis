@@ -107,38 +107,56 @@ export default function Catalog() {
   };
 
   return (
-    <div className="min-h-screen bg-dark-950">
-      <div className="section-padding max-w-7xl mx-auto">
+  <div className="min-h-screen bg-dark-950">
+
+    {/* HERO */}
+    <section className="relative min-h-[75vh] flex items-center overflow-hidden">
+
+      <div className="absolute inset-0">
+        <img
+          src="/images/catalog/asdasd.png"
+          alt="Catálogo MOXX"
+          className="w-full h-full object-cover"
+          style={{ objectPosition: "center 45%" }}
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-black/35" />
         <div
-  className="relative -mx-6 sm:-mx-8 lg:-mx-12 mb-12 pt-28 pb-28 bg-cover bg-center bg-no-repeat overflow-hidden rounded-b-3xl"
-  style={{
-    backgroundImage: `
-      linear-gradient(rgba(0,0,0,.70), rgba(0,0,0,.88)),
-      url('/images/catalog/banner123123.png')
-    `,
-  }}
->
-  <div className="max-w-7xl mx-auto section-padding relative z-10">
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="max-w-xl"
-    >
-      <p className="text-gold-400 text-sm font-semibold tracking-[0.2em] uppercase mb-3">
-        Colección Completa
-      </p>
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse at 20% 55%, rgba(0,0,0,.35) 0%, transparent 55%)",
+          }}
+        />
+      </div>
 
-      <h1 className="text-4xl lg:text-6xl font-bold text-white mb-4">
-        Catálogo MOXX
-      </h1>
+      <div className="relative section-padding max-w-7xl mx-auto w-full py-32">
 
-      <p className="text-gray-300">
-        Explora nuestra colección de arneses, correas y collares premium diseñados para perros y gatos.
-      </p>
-    </motion.div>
-  </div>
-</div>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-2xl"
+        >
+          <p className="text-gold-400 text-sm font-semibold tracking-[0.3em] uppercase mb-6">
+            COLECCIÓN COMPLETA
+          </p>
+
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-[1.1]">
+            Catálogo <span className="gold-text-gradient">MOXX</span>
+          </h1>
+
+          <p className="mt-6 text-lg text-dark-300 max-w-lg">
+            Explora nuestra colección premium de arneses, correas y collares para perros y gatos.
+          </p>
+        </motion.div>
+
+      </div>
+
+    </section>
+
+    <div className="section-padding max-w-7xl mx-auto">
 
         {/* Category Banner */}
         <AnimatePresence mode="wait">
