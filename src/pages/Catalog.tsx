@@ -126,7 +126,7 @@ export default function Catalog() {
           className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse at 20% 55%, rgba(0,0,0,.35) 0%, transparent 55%)",
+              "radial-gradient(ellipse at 20% 55%, rgba(0,0,0,.35) 0%, transparent 25%)",
           }}
         />
       </div>
