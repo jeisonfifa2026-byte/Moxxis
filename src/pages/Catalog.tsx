@@ -119,16 +119,6 @@ export default function Catalog() {
           className="w-full h-full object-cover"
           style={{ objectPosition: "center 45%" }}
         />
-
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-black/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-black/35" />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(ellipse at 20% 55%, rgba(0,0,0,.35) 0%, transparent 25%)",
-          }}
-        />
       </div>
 
       <div className="relative section-padding max-w-7xl mx-auto w-full py-32">
