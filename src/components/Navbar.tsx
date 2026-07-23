@@ -49,8 +49,7 @@ export default function Navbar() {
             <Link
               key={link.path}
               to={link.path}
-              className={`text-sm font-medium tracking-wide uppercase transition-colors duration-300 ${
-                location.pathname === link.path
+                  className={`text-lg font-medium tracking-wide uppercase transition-colors duration-300 ${                location.pathname === link.path
                   ? 'text-gold-400'
                   : 'text-dark-300 hover:text-white'
               }`}
