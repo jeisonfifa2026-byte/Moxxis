@@ -23,8 +23,14 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-dark-950 pt-24 pb-24">
-      <div className="section-padding max-w-6xl mx-auto">
+    <div 
+      className="relative min-h-screen bg-cover bg-center bg-no-repeat pt-24 pb-24"
+      style={{ backgroundImage: "url('images/catalog/contacto.png')" }}
+    >
+      {/* Capa oscura (Overlay) para mantener la legibilidad de los textos y tarjetas */}
+      <div className="absolute inset-0 bg-dark-950/85 backdrop-blur-[2px]" />
+
+      <div className="relative section-padding max-w-6xl mx-auto z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -51,7 +57,7 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="lg:col-span-2 space-y-6"
           >
-            <div className="p-6 rounded-2xl bg-dark-900 border border-white/5">
+            <div className="p-6 rounded-2xl bg-dark-900/80 backdrop-blur-md border border-white/10">
               <h3 className="text-lg font-semibold text-white mb-6">Información de Contacto</h3>
               <div className="space-y-5">
                 <a
@@ -99,14 +105,14 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="p-6 rounded-2xl bg-dark-900 border border-white/5">
+            <div className="p-6 rounded-2xl bg-dark-900/80 backdrop-blur-md border border-white/10">
               <h3 className="text-lg font-semibold text-white mb-4">Síguenos</h3>
               <div className="flex gap-4">
                 <a
                   href="https://www.instagram.com/moxxoficial/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-xl bg-dark-950 border border-white/10 flex items-center justify-center text-dark-400 hover:text-gold-400 hover:border-gold-500/30 transition-all"
+                  className="w-12 h-12 rounded-xl bg-dark-950/80 border border-white/10 flex items-center justify-center text-dark-400 hover:text-gold-400 hover:border-gold-500/30 transition-all"
                   aria-label="Instagram"
                 >
                   <Instagram className="w-5 h-5" />
@@ -115,7 +121,7 @@ export default function Contact() {
                   href="https://www.tiktok.com/@moxxoficial2026"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-xl bg-dark-950 border border-white/10 flex items-center justify-center text-dark-400 hover:text-gold-400 hover:border-gold-500/30 transition-all"
+                  className="w-12 h-12 rounded-xl bg-dark-950/80 border border-white/10 flex items-center justify-center text-dark-400 hover:text-gold-400 hover:border-gold-500/30 transition-all"
                   aria-label="TikTok"
                 >
                   <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
@@ -133,7 +139,7 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-3"
           >
-            <div className="p-8 rounded-2xl bg-dark-900 border border-white/5">
+            <div className="p-8 rounded-2xl bg-dark-900/80 backdrop-blur-md border border-white/10">
               <h3 className="text-lg font-semibold text-white mb-6">Envíanos un Mensaje</h3>
 
               {status === 'success' && (
@@ -155,7 +161,7 @@ export default function Contact() {
                       value={form.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-dark-950 border border-white/10 rounded-xl text-white text-sm placeholder-dark-600 focus:outline-none focus:border-gold-500/50 transition-colors"
+                      className="w-full px-4 py-3 bg-dark-950/80 border border-white/10 rounded-xl text-white text-sm placeholder-dark-600 focus:outline-none focus:border-gold-500/50 transition-colors"
                       placeholder="Tu nombre"
                     />
                   </div>
@@ -169,7 +175,7 @@ export default function Contact() {
                       value={form.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-dark-950 border border-white/10 rounded-xl text-white text-sm placeholder-dark-600 focus:outline-none focus:border-gold-500/50 transition-colors"
+                      className="w-full px-4 py-3 bg-dark-950/80 border border-white/10 rounded-xl text-white text-sm placeholder-dark-600 focus:outline-none focus:border-gold-500/50 transition-colors"
                       placeholder="tu@email.com"
                     />
                   </div>
@@ -184,7 +190,7 @@ export default function Contact() {
                       name="phone"
                       value={form.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-dark-950 border border-white/10 rounded-xl text-white text-sm placeholder-dark-600 focus:outline-none focus:border-gold-500/50 transition-colors"
+                      className="w-full px-4 py-3 bg-dark-950/80 border border-white/10 rounded-xl text-white text-sm placeholder-dark-600 focus:outline-none focus:border-gold-500/50 transition-colors"
                       placeholder="+57 300 000 0000"
                     />
                   </div>
@@ -197,7 +203,7 @@ export default function Contact() {
                       value={form.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-dark-950 border border-white/10 rounded-xl text-white text-sm focus:outline-none focus:border-gold-500/50 transition-colors appearance-none"
+                      className="w-full px-4 py-3 bg-dark-950/80 border border-white/10 rounded-xl text-white text-sm focus:outline-none focus:border-gold-500/50 transition-colors appearance-none"
                     >
                       <option value="" className="bg-dark-950">Selecciona un asunto</option>
                       <option value="pedido" className="bg-dark-950">Consulta de Pedido</option>
@@ -218,7 +224,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 bg-dark-950 border border-white/10 rounded-xl text-white text-sm placeholder-dark-600 focus:outline-none focus:border-gold-500/50 transition-colors resize-none"
+                    className="w-full px-4 py-3 bg-dark-950/80 border border-white/10 rounded-xl text-white text-sm placeholder-dark-600 focus:outline-none focus:border-gold-500/50 transition-colors resize-none"
                     placeholder="¿En qué podemos ayudarte?"
                   />
                 </div>
